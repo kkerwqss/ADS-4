@@ -46,14 +46,11 @@ int cbinsearch(int* arr, int size, int value) {
                 temp++;
             }
             break;
-        }
-        else if (arr[mid] < value) {
+        } else if (arr[mid] < value) {
             left = mid + 1;
-        }
-        else {
+        } else {
             right = mid - 1;
         }
-       
     }
     return count;
 }
@@ -63,6 +60,6 @@ int countPairs3(int *arr, int len, int value) {
   for (int i = 0; i < len; i++) {
     int key = value - arr[i];
     count += cbinsearch(&arr[i + 1], len - i - 1, key);
-}
-return count;
+  }
+  return count;
 }
